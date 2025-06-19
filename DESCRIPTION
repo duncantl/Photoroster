@@ -1,0 +1,9 @@
+Package: Photoroster
+Version: 0.1-0
+Title: Access data from UCD's Photoroster site
+Description:
+Author: Duncan Temple Lang
+Maintainer: DTL <dtemplelang@ucdavis.edu>
+Imports: Gradhub, RCurl, XML
+Suggests: openxlsx
+
