@@ -15,8 +15,8 @@ It can also arrange the photos into a spreadsheet, along with the students' name
 
 ```r
 ros = getRoster("STA 141B A", "202503")
-dim(ros)
 ```
+returns a data.frame with a row for each student in the course.
 
 ##  `getPhoto()`
 
@@ -30,9 +30,19 @@ class(img) # raw
 
 ```r
 imgs = fetchPhotos(ros)
+```
+returns a list of `raw` vectors, one for each student in the roster.
+
+```r
 imgs = fetchPhotos(ros, outDir = "Images")
+```
+saves each image to the `Images` directory as `<sid>.png`
+and returns the names of the files.
+
+```r
 imgs = fetchPhotos(sids = vectorOfSIDs, outDir = "Images")
 ```
+allows us to specify the SIDs directly rather than via a roster data.frame.
 
 
 ## `mkPhotoSheet()`
